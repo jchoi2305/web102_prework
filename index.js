@@ -154,12 +154,22 @@ allBtn.addEventListener('click', showAllGames); // all games
 const descriptionContainer = document.getElementById("description-container");
 
 // use filter or reduce to count the number of unfunded games
-
+// using filter, we're grabbing the list of unfunded games by calling the function made in challenge 6
+let unfundedGames = GAMES_JSON.filter( (game) => { return game.pledged < game.goal });
+const numUnfundedGames = unfundedGames.length
 
 // create a string that explains the number of unfunded games using the ternary operator
+let displayStr =  `A total of $${totalPledged.toLocaleString()} has been raised for ${GAMES_JSON.length} games.`
 
+displayStr += `Currently, 
+    ${numUnfundedGames} ${numUnfundedGames > 1 ? "remain" : "remains"} unfunded. We need your help
+    to fund these amazing games!`
 
 // create a new DOM element containing the template string and append it to the description container
+// source/aid: https://www.w3schools.com/js/js_htmldom_nodes.asp
+const newElem = document.createElement("div");
+newElem.innerHTML = `<p>${displayStr}</p>`;
+descriptionContainer.appendChild(newElem);
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
