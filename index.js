@@ -161,7 +161,7 @@ const numUnfundedGames = unfundedGames.length
 // create a string that explains the number of unfunded games using the ternary operator
 let displayStr =  `A total of $${totalPledged.toLocaleString()} has been raised for ${GAMES_JSON.length} games.`
 
-displayStr += `Currently, 
+displayStr += ` Currently, 
     ${numUnfundedGames} ${numUnfundedGames > 1 ? "remain" : "remains"} unfunded. We need your help
     to fund these amazing games!`
 
