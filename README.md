@@ -37,7 +37,7 @@ GIF created with **Loom**
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Challenges experienced throughout this prework were mainly syntax errors and refreshing my knowledge on javascript since it had been a little bit since I've used it. I also had to adjust the padding and layout a little bit to make it resemble the expected layout, which were again just mainly refreshers on CSS and HTML. 
 
 ## License
 
